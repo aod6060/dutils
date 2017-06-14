@@ -1,5 +1,6 @@
 package com.derf.utils.proxy;
 
+import com.derf.utils.blocks.DBlocks;
 import com.derf.utils.items.DItems;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -11,6 +12,8 @@ public class DProxyClient extends DProxyCommon {
 	@Override
 	public void preInit(FMLPreInitializationEvent e) {
 		super.preInit(e);
+		DBlocks.variant();
+		DBlocks.rendererRegister();
 		DItems.registerRenderer();
 	}
 

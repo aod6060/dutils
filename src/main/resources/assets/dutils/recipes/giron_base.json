@@ -1,0 +1,15 @@
+{
+	"type": "crafting_shaped",
+	"pattern": [
+		"n n",
+		" i ",
+		"n n"
+	],
+	"key": {
+		"n": { "item": "minecraft:gold_nugget" },
+		"i": { "item": "minecraft:iron_ingot" }
+	},
+	"result": {
+		"item": "dutils:giron_base"
+	}
+}

@@ -1,5 +1,7 @@
 package com.derf.utils.creativetabs;
 
+import com.derf.utils.items.DItems;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -13,7 +15,7 @@ public class DCreativeTabs {
 			@Override
 			public ItemStack getTabIconItem() {
 				// TODO Auto-generated method stub
-				return new ItemStack(Items.APPLE);
+				return new ItemStack(DItems.TOOL_CASING);
 			}
 			
 		};

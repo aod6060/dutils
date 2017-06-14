@@ -1,0 +1,13 @@
+{
+	"type": "crafting_shaped",
+	"pattern": [
+		"b"
+	],
+	"key": {
+		"b": { "item": "dutils:giron_block" }
+	},
+	"result": {
+		"item": "dutils:giron_ingot",
+		"count": 9
+	}
+}

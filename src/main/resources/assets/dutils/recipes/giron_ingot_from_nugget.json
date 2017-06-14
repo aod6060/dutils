@@ -1,0 +1,14 @@
+{
+	"type": "crafting_shaped",
+	"pattern": [
+		"nnn",
+		"nnn",
+		"nnn"
+	],
+	"key": {
+		"n": { "item": "dutils:giron_nugget" }
+	},
+	"result": {
+		"item": "dutils:giron_ingot"
+	}
+}

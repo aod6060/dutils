@@ -1,0 +1,16 @@
+{
+	"type": "crafting_shaped",
+	"pattern": [
+		"ici",
+		"cbc",
+		"ici"
+	],
+	"key": {
+		"i": { "item": "dutils:giron_ingot" },
+		"b": { "item": "dutils:giron_block" },
+		"c": { "item": "minecraft:iron_bars" }
+	},
+	"result": {
+		"item": "dutils:machine_casing"
+	}
+}

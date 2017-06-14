@@ -1,6 +1,6 @@
 {
 	"parent": "dutils:item/item_basic",
 	"textures": {
-		"layer0": "dutils:items/tool_casing"
+		"layer0": "dutils:items/giron_base"
 	}
 }

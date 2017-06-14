@@ -102,6 +102,9 @@ public class DCraftingManager {
 	}
 	
 	private static void iteratePaths(Gson gson, Iterator<Path> paths, Path path) {
+		
+		int i = 0;
+		
 		while(paths.hasNext()) {
 			
 			Path absolutePath = paths.next();
@@ -115,7 +118,10 @@ public class DCraftingManager {
 				
 				ResourceLocation nameResource = new ResourceLocation(name);
 				
+				
 				BufferedReader reader = null;
+				
+				++i;
 				
 				try {
 					try {
@@ -123,11 +129,11 @@ public class DCraftingManager {
 						IRecipe recipe = parseJson(JsonUtils.func_193839_a(gson, reader, JsonObject.class));
 						set(name, recipe);
 					} catch(JsonParseException e) {
-						DLogger.getLogger().error("Json Parser Error: " + e.getMessage());
-						return;
+						DLogger.getLogger().error("Json Parser Error: " + relPath.toString() + ": \"" + e.getMessage() + "\"");
+						continue;
 					} catch (IOException e) {
 						DLogger.getLogger().error("IOException??? File can't load: " + e.getMessage());
-						return;
+						continue;
 					}
 				} finally {
 					IOUtils.closeQuietly(reader);

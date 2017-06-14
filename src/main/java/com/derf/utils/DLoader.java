@@ -1,5 +1,6 @@
 package com.derf.utils;
 
+import com.derf.utils.blocks.DBlocks;
 import com.derf.utils.items.DItems;
 import com.derf.utils.proxy.IDProxy;
 
@@ -31,7 +32,8 @@ public class DLoader {
 	public DLoader() {
 		// Handle registration..
 		DLogger.create();
-		MinecraftForge.EVENT_BUS.register(new DItems());
+		//MinecraftForge.EVENT_BUS.register(new DBlocks());
+		//MinecraftForge.EVENT_BUS.register(new DItems());
 	}
 	
 	// Event Handlers
