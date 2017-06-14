@@ -18,15 +18,15 @@ public final class DItems {
 	public static Item GIRON_NUGGET = new DItem("giron_nugget");
 	// tool casing
 	public static Item TOOL_CASING = new DItem("tool_casing");
-	
-	
 	// Giron Apples
+	public static Item GIRON_APPLE = new DItemFoodGironApple("giron_apple", 4, 4, false).setAlwaysEdible();
 	
 	public static void creativeTabs() {
 		GIRON_BASE.setCreativeTab(DCreativeTabs.TAB_DUTILS);
 		GIRON_INGOT.setCreativeTab(DCreativeTabs.TAB_DUTILS);
 		GIRON_NUGGET.setCreativeTab(DCreativeTabs.TAB_DUTILS);
 		TOOL_CASING.setCreativeTab(DCreativeTabs.TAB_DUTILS);
+		GIRON_APPLE.setCreativeTab(DCreativeTabs.TAB_DUTILS);
 	}
 	
 	public static void crafting() {
@@ -38,11 +38,16 @@ public final class DItems {
 		DRegistry.addSmelting(GIRON_BASE, new ItemStack(GIRON_INGOT, 3), 1.0f);
 	}
 	
+	public static void variants() {
+	}
+	
 	public static void registerRenderer() {
 		DRegistry.registerRenderer(GIRON_BASE, "giron_base");
 		DRegistry.registerRenderer(GIRON_INGOT, "giron_ingot");
 		DRegistry.registerRenderer(GIRON_NUGGET, "giron_nugget");
 		DRegistry.registerRenderer(TOOL_CASING, "tool_casing");
+		DRegistry.registerRenderer(GIRON_APPLE, "giron_apple");
+		DRegistry.registerRenderer(GIRON_APPLE, 1, "giron_apple");
 	}
 	
 	
@@ -56,7 +61,8 @@ public final class DItems {
 					DItems.GIRON_BASE,
 					DItems.GIRON_INGOT,
 					DItems.GIRON_NUGGET,
-					DItems.TOOL_CASING
+					DItems.TOOL_CASING,
+					DItems.GIRON_APPLE
 			};
 			
 			event.getRegistry().registerAll(items);
