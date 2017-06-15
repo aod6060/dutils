@@ -2,6 +2,7 @@ package com.derf.utils;
 
 import com.derf.utils.blocks.DBlocks;
 import com.derf.utils.items.DItems;
+import com.derf.utils.items.pills.DPillEffectsFactory;
 import com.derf.utils.proxy.IDProxy;
 
 import net.minecraftforge.common.MinecraftForge;
@@ -34,6 +35,7 @@ public class DLoader {
 		DLogger.create();
 		//MinecraftForge.EVENT_BUS.register(new DBlocks());
 		//MinecraftForge.EVENT_BUS.register(new DItems());
+		DPillEffectsFactory.init();
 	}
 	
 	// Event Handlers

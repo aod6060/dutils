@@ -5,6 +5,7 @@ item.giron_base.name=Giron Base
 item.giron_nugget.name=Giron Nugget
 item.giron_ingot.name=Giron Ingot
 item.tool_casing.name=Tool Casing
+item.giron_apple.name=Giron Apple
 # Tiles
 tile.giron_block.name=Giron Block
 tile.machine_casing.name=Machine Casing

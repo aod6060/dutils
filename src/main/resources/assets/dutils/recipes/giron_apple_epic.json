@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"ggg",
+		"gag",
+		"ggg"
+	],
+	"key": {
+		"a": { "item": "dutils:giron_apple", "data": 0 },
+		"g": { "item": "dutils:giron_block" }
+	},
+	"result": { "item": "dutils:giron_apple", "data": 1 }
+}

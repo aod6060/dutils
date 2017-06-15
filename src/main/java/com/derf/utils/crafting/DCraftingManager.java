@@ -36,9 +36,12 @@ import net.minecraft.util.ResourceLocation;
 
 /**
  * This will wrap up the new recipe system...
+ * 
+ * Deprecated for the new recipe system from forge...
  * @author Fred
  *
  */
+@Deprecated
 public class DCraftingManager {
 	
 	private static Map<String, DHolder<String, IRecipe>> craftingRegistry = new HashMap<String, DHolder<String, IRecipe>>();
@@ -53,7 +56,9 @@ public class DCraftingManager {
 		
 		for(DHolder<String, IRecipe> holder : list) {
 			// Register all recipes with Minecraft...
-			CraftingManager.func_193379_a(holder.getValue1(), holder.getValue2());
+			//CraftingManager.func_193379_a(holder.getValue1(), holder.getValue2());
+			
+			
 		}
 	}
 

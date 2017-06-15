@@ -4,13 +4,42 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 
+/**
+ * This is an interface for the pill items...
+ * it will contain all methods related to pill effects
+ * @author Fred
+ *
+ */
 public interface IDPillEffect {
 	
-	void onPillEffect(EntityPlayer player, ItemStack stack);
+	/**
+	 * Applies Effect on player
+	 * @param player
+	 */
+	void onPillEffect(EntityPlayer player);
 	
+	/**
+	 * Returns the potion type
+	 * @return
+	 */
+	Potion getPotionEffect();
+	
+	/**
+	 * Returns the duration for pill effect
+	 * @return
+	 */
 	int getDuration();
 	
-	int getLevel();
+	/**
+	 * Returns the potiency of the pill 
+	 * @return
+	 */
+	int getPotency();
 	
-	Potion getEffect();
+	/**
+	 * This will return the name
+	 * @return
+	 */
+	String getName();
+	
 }

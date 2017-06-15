@@ -2,14 +2,18 @@ package com.derf.utils.proxy;
 
 import com.derf.utils.DLoader;
 import com.derf.utils.DLogger;
-import com.derf.utils.DRegistry;
 import com.derf.utils.blocks.DBlocks;
+import com.derf.utils.crafting.RecipeFactoryShaped;
+import com.derf.utils.crafting.RecipeFactoryShapeless;
 import com.derf.utils.creativetabs.DCreativeTabs;
 import com.derf.utils.items.DItems;
 
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class DProxyCommon implements IDProxy {
 
@@ -25,7 +29,7 @@ public class DProxyCommon implements IDProxy {
 	@Override
 	public void init(FMLInitializationEvent e) {
 		DLogger.getLogger().info("Hello, from init");
-		DRegistry.registerRecipes(DLoader.modid);
+		//DRegistry.registerRecipes(DLoader.modid); - Getting Rid of this for testing...
 		DBlocks.crafting();
 		DItems.crafting();
 	}

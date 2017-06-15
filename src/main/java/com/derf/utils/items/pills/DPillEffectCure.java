@@ -1,38 +1,42 @@
 package com.derf.utils.items.pills;
 
+import java.util.Iterator;
+
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 
-/**
- * This is a special case were this pill will cure an entity of
- * all potion effects. Act like milk...
- * @author Fred
- *
- */
 public class DPillEffectCure implements IDPillEffect {
 
 	@Override
-	public void onPillEffect(EntityPlayer player, ItemStack stack) {
-		player.curePotionEffects(stack);
+	public void onPillEffect(EntityPlayer player) {
+		ItemStack milk = new ItemStack(Items.MILK_BUCKET);
+		player.curePotionEffects(milk);
+	}
+	
+
+	@Override
+	public Potion getPotionEffect() {
+		return null;
 	}
 
 	@Override
 	public int getDuration() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int getLevel() {
-		// TODO Auto-generated method stub
+	public int getPotency() {
 		return 0;
 	}
 
+
 	@Override
-	public Potion getEffect() {
+	public String getName() {
 		// TODO Auto-generated method stub
-		return null;
+		return "cure";
 	}
 
 }

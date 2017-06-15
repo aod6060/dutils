@@ -1,0 +1,6 @@
+{
+	"parent": "dutils:item/item_basic",
+	"textures": {
+		"layer0": "dutils:items/pills/empty_capsule"
+	}
+}
