@@ -44,58 +44,63 @@ public final class DPillEffectsFactory {
 		//effects.add(createCure()); // 0
 		register(createCure());
 		// Register Teir 1 Pills
-		// Speed
+		// Speed 1
 		register(createBasic(MobEffects.SPEED, "speed"));
-		// Slowness
+		// Slowness 2
 		register(createBasic(MobEffects.SLOWNESS, "slowness"));
-		// Haste
+		// Haste 3
 		register(createBasic(MobEffects.HASTE, "haste"));
-		// Mining Fatigue
+		// Mining Fatigue 4
 		register(createBasic(MobEffects.MINING_FATIGUE, "mining_fatigue"));
-		// strength
+		// strength 5
 		register(createBasic(MobEffects.STRENGTH, "strength"));
-		// Instant Health
-		register(createBasic(MobEffects.INSTANT_HEALTH, "instant_health"));
-		// Instant Damage
-		register(createBasic(MobEffects.INSTANT_DAMAGE, "instant_damage"));
-		// Jump Boost
+		// Instant Health 6
+		//register(createBasic(MobEffects.INSTANT_HEALTH, "instant_health"));
+		register(createBasic(MobEffects.INSTANT_HEALTH, 1, 0, "instant_health"));
+		// Instant Damage 7
+		register(createBasic(MobEffects.INSTANT_DAMAGE, 1, 0, "instant_damage"));
+		// Jump Boost 8
 		register(createBasic(MobEffects.JUMP_BOOST, "jump_boost"));
-		// Nausea
+		// Nausea 9
 		register(createBasic(MobEffects.NAUSEA, "nausea"));
-		// Regeneration
+		// Regeneration 10
 		register(createBasic(MobEffects.REGENERATION, "regeneration"));
-		// Resistance
+		// Resistance 11
 		register(createBasic(MobEffects.RESISTANCE, "resistance"));
-		// Fire Resistance
+		// Fire Resistance 12
 		register(createBasic(MobEffects.FIRE_RESISTANCE, "fire_resistance"));
-		// Water Breathing
+		// Water Breathing 13
 		register(createBasic(MobEffects.WATER_BREATHING, "water_breathing"));
-		// Invisibility
+		// Invisibility 14
 		register(createBasic(MobEffects.INVISIBILITY, "invisibility"));
-		// Bindness
+		// Bindness 15
 		register(createBasic(MobEffects.BLINDNESS, "blindness"));
-		// Night Vision
+		// Night Vision 16
 		register(createBasic(MobEffects.HUNGER, "hunger"));
-		// Weakness
+		// Weakness 17
 		register(createBasic(MobEffects.WEAKNESS, "weakness"));
-		// Poison
+		// Poison 18
 		register(createBasic(MobEffects.POISON, "poison"));
-		// Wither
+		// Wither 19
 		register(createBasic(MobEffects.WITHER, "wither"));
-		// Health Boost
+		// Health Boost 20
 		register(createBasic(MobEffects.HEALTH_BOOST, "health_boost"));
-		// Absorption
+		// Absorption 21
 		register(createBasic(MobEffects.ABSORPTION, "absorption"));
-		// Saturation
+		// Saturation 22
 		register(createBasic(MobEffects.SATURATION, "saturation"));
-		// Glowing
+		// Glowing 23
 		register(createBasic(MobEffects.GLOWING, "glowing"));
-		// Levitation
+		// Levitation 24
 		register(createBasic(MobEffects.LEVITATION, "levitation"));
-		// Luck
-		register(createBasic(MobEffects.HUNGER, "luck"));
-		// Unluck
-		register(createBasic(MobEffects.HUNGER, "unluck"));
+		// Luck 25
+		register(createBasic(MobEffects.LUCK, "luck"));
+		// Unluck 26
+		register(createBasic(MobEffects.UNLUCK, "unluck"));
+		
+		// Handle Curative Effects
+		// Handle Main Effects
+		// Handle Instant Effect aka: instant_health and instant_damage
 	}
 	
 	/**

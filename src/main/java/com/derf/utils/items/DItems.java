@@ -58,11 +58,11 @@ public final class DItems {
 		DRegistry.registerRenderer(TOOL_CASING, "tool_casing");
 		DRegistry.registerRenderer(GIRON_APPLE, "giron_apple");
 		DRegistry.registerRenderer(GIRON_APPLE, 1, "giron_apple");
-		DRegistry.registerRenderer(EMPTY_CAPSULE, "empty_capsule");
+		DRegistry.registerRenderer(EMPTY_CAPSULE, "pill/empty_capsule");
 		
 		
 		for(int i = 0; i < DPillEffectsFactory.getMaxSize(); i++) {
-			DRegistry.registerRenderer(PILLS, i, "empty_capsule");
+			DRegistry.registerRenderer(PILLS, i, "pill/"+ DPillEffectsFactory.get(i).getName());
 		}
 	}
 	

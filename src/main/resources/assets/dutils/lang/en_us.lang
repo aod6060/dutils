@@ -1,11 +1,43 @@
 # Item Group
 itemGroup.tab_dutils=DUtils
+
 # Item 
 item.giron_base.name=Giron Base
 item.giron_nugget.name=Giron Nugget
 item.giron_ingot.name=Giron Ingot
 item.tool_casing.name=Tool Casing
 item.giron_apple.name=Giron Apple
+
+#Pills
+item.empty_capsule.name=Empty Capsule
+item.pill.cure.name=Curative Pill (Acts like a milk bucket)
+item.pill.speed.name=Speed Pill
+item.pill.slowness.name=Slowness Pill
+item.pill.haste.name=Haste Pill (Increases Mine Speed)
+item.pill.mining_fatigue.name=Mining Fatigue Pill
+item.pill.strength.name=Strength Pill
+item.pill.instant_health.name=Instant Health Pill
+item.pill.instant_damage.name=Instant Damage Pill
+item.pill.jump_boost.name=Jump Boost Pill
+item.pill.nausea.name=Nausea Pill
+item.pill.regeneration.name=Regeneration Pill
+item.pill.resistance.name=Resistance Pill
+item.pill.fire_resistance.name=Fire Resistance Pill
+item.pill.water_breathing.name=Water Breathing Pill
+item.pill.invisibility.name=Invisibility Pill
+item.pill.blindness.name=Blindness Pill
+item.pill.hunger.name=Hunger Pill
+item.pill.weakness.name=Weakness Pill
+item.pill.poison.name=Poison Pill
+item.pill.wither.name=Wither Pill
+item.pill.heath_boost.name=Health Boost Pill
+item.pill.absorption.name=Absorption Pill
+item.pill.saturation.name=Saturation Pill
+item.pill.glowing.name=Glowing Pill
+item.pill.levitation.name=Levitation Pill
+item.pill.luck.name=Luck Pill
+item.pill.unluck.name=Unluck Pill
+
 # Tiles
 tile.giron_block.name=Giron Block
 tile.machine_casing.name=Machine Casing
