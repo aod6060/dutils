@@ -92,7 +92,10 @@ public class DRegistry {
 	/**
 	 * This will register all recipes with the new recipe system...
 	 * @param String modid - Takes mod ID and searches for recipes in recipes folder /assets/[modid]/recipes
+	 * 
+	 * This will get deleted soon once the pill system is created..
 	 */
+	@Deprecated
 	public static void registerRecipes(String modid) {
 		DCraftingManager.registerRecipes(modid);
 	}

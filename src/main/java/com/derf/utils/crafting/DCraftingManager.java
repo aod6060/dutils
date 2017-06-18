@@ -20,7 +20,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
 
 import com.derf.utils.DLogger;
-import com.derf.utils.util.DHolder;
+import com.derf.utils.util.DGenericBean2;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
@@ -44,7 +44,7 @@ import net.minecraft.util.ResourceLocation;
 @Deprecated
 public class DCraftingManager {
 	
-	private static Map<String, DHolder<String, IRecipe>> craftingRegistry = new HashMap<String, DHolder<String, IRecipe>>();
+	private static Map<String, DGenericBean2<String, IRecipe>> craftingRegistry = new HashMap<String, DGenericBean2<String, IRecipe>>();
 	
 	public static void registerRecipes(String modid) {
 		load(modid);
@@ -52,9 +52,9 @@ public class DCraftingManager {
 	}
 	
 	private static void register() {
-		Collection<DHolder<String, IRecipe>> list = craftingRegistry.values();
+		Collection<DGenericBean2<String, IRecipe>> list = craftingRegistry.values();
 		
-		for(DHolder<String, IRecipe> holder : list) {
+		for(DGenericBean2<String, IRecipe> holder : list) {
 			// Register all recipes with Minecraft...
 			//CraftingManager.func_193379_a(holder.getValue1(), holder.getValue2());
 			
@@ -149,10 +149,10 @@ public class DCraftingManager {
 
 	private static void set(String name, IRecipe recipe) {
 		//CraftingManager.func_193379_a(name, recipe);
-		craftingRegistry.put(name, new DHolder<String, IRecipe>(name, recipe));
+		craftingRegistry.put(name, new DGenericBean2<String, IRecipe>(name, recipe));
 	}
 	
-	private static DHolder<String, IRecipe> get(String name) {
+	private static DGenericBean2<String, IRecipe> get(String name) {
 		return craftingRegistry.get(name);
 	}
 	

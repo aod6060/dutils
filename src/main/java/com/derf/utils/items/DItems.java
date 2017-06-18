@@ -35,8 +35,8 @@ public final class DItems {
 		GIRON_NUGGET.setCreativeTab(DCreativeTabs.TAB_DUTILS);
 		TOOL_CASING.setCreativeTab(DCreativeTabs.TAB_DUTILS);
 		GIRON_APPLE.setCreativeTab(DCreativeTabs.TAB_DUTILS);
-		EMPTY_CAPSULE.setCreativeTab(DCreativeTabs.TAB_DUTILS); // Reddye + Bonemeal + GIRON_NUGGET = Empty Capsule... For now...
-		PILLS.setCreativeTab(DCreativeTabs.TAB_DUTILS);
+		EMPTY_CAPSULE.setCreativeTab(DCreativeTabs.TAB_DUTILS_PHARMACEUTICALS); // Reddye + Bonemeal + GIRON_NUGGET = Empty Capsule... For now...
+		PILLS.setCreativeTab(DCreativeTabs.TAB_DUTILS_PHARMACEUTICALS);
 	}
 	
 	public static void crafting() {

@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{ "item": "minecraft:milk_bucket" },
+		{ "item": "dutils:empty_capsule" }
+	],
+	"result": { "item": "dutils:pill", "data": 0, "count": 16 }
+}

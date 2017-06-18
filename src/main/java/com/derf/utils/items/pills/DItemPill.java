@@ -5,6 +5,7 @@ import com.derf.utils.items.DItem;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
@@ -71,6 +72,44 @@ public class DItemPill extends DItem {
 		}
 		
 		return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, player.getHeldItem(hand));
+	}
+
+	@SideOnly(Side.CLIENT)
+	@Override
+	public EnumRarity getRarity(ItemStack stack) {
+		
+		int meta = stack.getMetadata();
+		
+		IDPillEffect effect = DPillEffectsFactory.get(meta);
+		
+		EnumRarity rarity = EnumRarity.COMMON;
+		
+		
+		switch(effect.getPotency()) {
+		case 1:
+			rarity = EnumRarity.UNCOMMON;
+			break;
+		case 2:
+			rarity = EnumRarity.RARE;
+			break;
+		case 3:
+		case 4:
+			rarity = EnumRarity.EPIC;
+			break;
+		}
+		
+		return rarity;
+	}
+
+	@SideOnly(Side.CLIENT)
+	@Override
+	public boolean hasEffect(ItemStack stack) {
+		int meta = stack.getMetadata();
+		
+		IDPillEffect effect = DPillEffectsFactory.get(meta);
+		
+		
+		return effect.getPotency() >= 4;
 	}
 	
 	

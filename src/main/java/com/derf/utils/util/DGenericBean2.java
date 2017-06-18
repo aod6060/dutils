@@ -1,13 +1,13 @@
 package com.derf.utils.util;
 
-public class DHolder<S, T> {
+public class DGenericBean2<S, T> {
 	
 	private S value1 = null;
 	private T value2 = null;
 	
-	public DHolder() {}
+	public DGenericBean2() {}
 	
-	public DHolder(S value1, T value2) {
+	public DGenericBean2(S value1, T value2) {
 		this.value1 = value1;
 		this.value2 = value2;
 	}
