@@ -1,5 +1,7 @@
 package com.derf.utils.items;
 
+import com.derf.utils.util.DUtility;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
@@ -49,7 +51,7 @@ public class DItemFoodGironApple extends DItemFood {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubItems(CreativeTabs item, NonNullList<ItemStack> tab) {
-		if(this.func_194125_a(item)) {
+		if(DUtility.isInCreativeTab(item, this)) {
 			tab.add(new ItemStack(this));
 			tab.add(new ItemStack(this, 1, 1));
 		}

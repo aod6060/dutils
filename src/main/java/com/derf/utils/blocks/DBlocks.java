@@ -1,5 +1,8 @@
 package com.derf.utils.blocks;
 
+import java.util.Arrays;
+import java.util.List;
+
 import com.derf.utils.DRegistry;
 import com.derf.utils.creativetabs.DCreativeTabs;
 import com.google.common.base.Preconditions;
@@ -65,14 +68,15 @@ public final class DBlocks {
 				new ItemBlock(DBlocks.GIRON_BLOCK),
 				new ItemBlock(DBlocks.MACHINE_CASING)
 			};
-			
+			final List<ItemBlock> itemsList = Arrays.asList(items);
 			final IForgeRegistry<Item> registry = event.getRegistry();
-			
-			for(final ItemBlock item : items) {
-				final Block block = item.getBlock();
-				final ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(), "Block %s has a null registry name...");
-				registry.register(item.setRegistryName(registryName));
-			}
+			itemsList.forEach(item -> handleItemBlock(item, registry));
+		}
+
+		private static void handleItemBlock(ItemBlock item, IForgeRegistry<Item> registry) {
+			final Block block = item.getBlock();
+			final ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(), "Block %s has a null registry name...");
+			registry.register(item.setRegistryName(registryName));
 		}
 	}
 }

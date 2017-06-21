@@ -3,9 +3,13 @@ package com.derf.utils.items.pills;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
 
 import com.derf.utils.DLogger;
+import com.derf.utils.DRegistry;
+import com.derf.utils.items.DItems;
 import com.derf.utils.util.DGenericBean2;
 
 import net.minecraft.init.MobEffects;
@@ -17,14 +21,9 @@ import net.minecraft.potion.Potion;
  *
  */
 public final class DPillEffectsFactory {
-	/*
-	private static final int MIN_DURATION = 3600;
-	private static final int MIN_POTENCY = 0;
-	*/
-	
 	private static int IDs = 1;
 	
-	private static boolean isGenerateIDs = false;
+	private static boolean isGenerateIDs = true;
 	
 	private static List<IDPillEffect> effects = new ArrayList<IDPillEffect>();
 	
@@ -41,111 +40,109 @@ public final class DPillEffectsFactory {
 	 * This will init the PillEffects... Don't call this method use register...
 	 */
 	public static void init() {
-		
-		
 		effects.clear();
-		
 		// Handle Curative Effects
 		register(createCure());
 		// Handle Main Effect
-		List<DGenericBean2<Potion, String>> effects1 = new ArrayList<DGenericBean2<Potion, String>>();
-		
-		effects1.clear();
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.SPEED, "speed"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.SLOWNESS, "slowness"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.HASTE, "haste"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.MINING_FATIGUE, "mining_fatigue"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.STRENGTH, "strength"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.JUMP_BOOST, "jump_boost"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.NAUSEA, "nausea"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.REGENERATION, "regeneration"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.RESISTANCE, "resistance"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.FIRE_RESISTANCE, "fire_resistance"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.WATER_BREATHING, "water_breathing"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.INVISIBILITY, "invisibility"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.BLINDNESS, "blindness"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.NIGHT_VISION, "night_vision"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.HUNGER, "hunger"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.WEAKNESS, "weakness"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.POISON, "poison"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.WITHER, "wither"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.HEALTH_BOOST, "health_boost"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.ABSORPTION, "absorption"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.SATURATION, "saturation"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.GLOWING, "glowing"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.LEVITATION, "levitation"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.LUCK, "luck"));
-		effects1.add(new DGenericBean2<Potion, String>(MobEffects.UNLUCK, "unluck"));
+		List<DGenericBean2<Potion, String>> effects1 = createEffects1List();
 		// Handle Instant Effect aka: instant_health and instant_damage
-		List<DGenericBean2<Potion, String>> effects2 = new ArrayList<DGenericBean2<Potion, String>>();
-		effects2.clear();
-		effects2.add(new DGenericBean2(MobEffects.INSTANT_DAMAGE, "instant_damage"));
-		effects2.add(new DGenericBean2(MobEffects.INSTANT_HEALTH, "instant_health"));
+		List<DGenericBean2<Potion, String>> effects2 = createEffects2List();
 		// Create Teirs
-		List<Teirs> teirs = new ArrayList<Teirs>();
-		teirs.clear();
 		Teirs.clear();
-		teirs.add(Teirs.create()); // 1
-		teirs.add(Teirs.create()); // 2
-		teirs.add(Teirs.create()); // 3
-		teirs.add(Teirs.create()); // 4
-		teirs.add(Teirs.create()); // 5
-		
+		List<Teirs> teirs = createTeirList();
 		// Handle Regular Pills
-		for(Teirs teir : teirs) {
-			for(DGenericBean2<Potion, String> bean : effects1) {
-				register(createBasic(bean.getValue1(), teir.getDuration(), teir.getPotency(), bean.getValue2()));
-			}
-		}
-		
+		teirs.forEach(teir -> handleBeans(teir, effects1));
 		// Handle Instant Pills
-		for(Teirs teir : teirs) {
-			for(DGenericBean2<Potion, String> bean : effects2) {
-				register(createBasic(bean.getValue1(), 1, teir.getPotency(), bean.getValue2()));
-			}
-		}
+		teirs.forEach(teir -> handleBeansInstant(teir, effects2));
 		
-		
-		
+		// Handle Generated ID to file...
 		if(isGenerateIDs) {
 			try {
 				PrintWriter out = new PrintWriter("pill_ids.txt");
 				IDs = 1;
-				
 				// Handle Regular Pills
-				for(Teirs teir : teirs) {
-					for(DGenericBean2<Potion, String> bean : effects1) {
-						//register(createBasic(bean.getValue1(), teir.getDuration(), teir.getPotency(), bean.getValue2()));
-						
-						out.println("// " + bean.getValue2() + " teir " + (teir.getPotency() + 1));
-						out.println(" { \"item\": \"dutils:pill\", \"data\": "+IDs+" }");
-						out.println();
-						++IDs;
-					}
-				}
-				
+				teirs.forEach(teir -> handleFileOutput(teir, out, effects1));
 				// Handle Instant Pills
-				for(Teirs teir : teirs) {
-					for(DGenericBean2<Potion, String> bean : effects2) {
-						//register(createBasic(bean.getValue1(), 1, teir.getPotency(), bean.getValue2()));
-						
-						out.println("// " + bean.getValue2() + " teir " + (teir.getPotency() + 1));
-						out.println(" { \"item\": \"dutils:pill\", \"data\": "+IDs+" }");
-						out.println();
-						++IDs;
-						
-					}
-				}
-				
+				teirs.forEach(teir -> handleFileOutput(teir, out, effects2));
 				out.close();
-				
 			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
-			} finally {
-				
 			}
 		}
+	}
+	
+	private static List<Teirs> createTeirList() {
+		return Arrays.asList(
+				Teirs.create(),
+				Teirs.create(),
+				Teirs.create(),
+				Teirs.create(),
+				Teirs.create()
+		);
+	}
+
+	private static List<DGenericBean2<Potion, String>> createEffects2List() {
+		return Arrays.asList(
+			new DGenericBean2(MobEffects.INSTANT_DAMAGE, "instant_damage"),
+			new DGenericBean2(MobEffects.INSTANT_HEALTH, "instant_health")
+		);
+	}
+
+	private static List<DGenericBean2<Potion, String>> createEffects1List() {
+		return Arrays.asList(
+				new DGenericBean2<Potion, String>(MobEffects.SPEED, "speed"),
+				new DGenericBean2<Potion, String>(MobEffects.SLOWNESS, "slowness"),
+				new DGenericBean2<Potion, String>(MobEffects.HASTE, "haste"),
+				new DGenericBean2<Potion, String>(MobEffects.MINING_FATIGUE, "mining_fatigue"),
+				new DGenericBean2<Potion, String>(MobEffects.STRENGTH, "strength"),
+				new DGenericBean2<Potion, String>(MobEffects.JUMP_BOOST, "jump_boost"),
+				new DGenericBean2<Potion, String>(MobEffects.NAUSEA, "nausea"),
+				new DGenericBean2<Potion, String>(MobEffects.REGENERATION, "regeneration"),
+				new DGenericBean2<Potion, String>(MobEffects.RESISTANCE, "resistance"),
+				new DGenericBean2<Potion, String>(MobEffects.FIRE_RESISTANCE, "fire_resistance"),
+				new DGenericBean2<Potion, String>(MobEffects.WATER_BREATHING, "water_breathing"),
+				new DGenericBean2<Potion, String>(MobEffects.INVISIBILITY, "invisibility"),
+				new DGenericBean2<Potion, String>(MobEffects.BLINDNESS, "blindness"),
+				new DGenericBean2<Potion, String>(MobEffects.NIGHT_VISION, "night_vision"),
+				new DGenericBean2<Potion, String>(MobEffects.HUNGER, "hunger"),
+				new DGenericBean2<Potion, String>(MobEffects.WEAKNESS, "weakness"),
+				new DGenericBean2<Potion, String>(MobEffects.POISON, "poison"),
+				new DGenericBean2<Potion, String>(MobEffects.WITHER, "wither"),
+				new DGenericBean2<Potion, String>(MobEffects.HEALTH_BOOST, "health_boost"),
+				new DGenericBean2<Potion, String>(MobEffects.ABSORPTION, "absorption"),
+				new DGenericBean2<Potion, String>(MobEffects.SATURATION, "saturation"),
+				new DGenericBean2<Potion, String>(MobEffects.GLOWING, "glowing"),
+				new DGenericBean2<Potion, String>(MobEffects.LEVITATION, "levitation"),
+				new DGenericBean2<Potion, String>(MobEffects.LUCK, "luck"),
+				new DGenericBean2<Potion, String>(MobEffects.UNLUCK, "unluck")
+		);
+	}
+	
+	private static void handleFileOutput(Teirs teir, PrintWriter out, List<DGenericBean2<Potion, String>> effects) {
+		effects.forEach(effect -> handlePrintToFile(teir, out, effect));
+	}
+
+	private static void handlePrintToFile(Teirs teir, PrintWriter out, DGenericBean2<Potion, String> effect) {
+		out.println("// " + effect.getValue2() + " teir " + (teir.getPotency() + 1));
+		out.println(" { \"item\": \"dutils:pill\", \"data\": "+IDs+" }");
+		out.println();
+		++IDs;
+	}
+
+	private static void handleBeansInstant(Teirs teir, List<DGenericBean2<Potion, String>> effects) {
+		effects.forEach(bean -> register(createBasic(bean.getValue1(), 1, teir.getPotency(), bean.getValue2())));
+	}
+
+	private static void handleBeans(Teirs teir, List<DGenericBean2<Potion, String>> effects) {
+		effects.forEach(bean -> register(createBasic(bean.getValue1(), teir.getDuration(), teir.getPotency(), bean.getValue2())));
+	}
+
+	public static void registerRenderer() {
+		IDs = 0;
+		effects.forEach(e -> {
+			DRegistry.registerRenderer(DItems.PILLS, IDs, "pill/"+e.getName());
+			++IDs;
+		});
 	}
 	
 	/**
@@ -173,8 +170,6 @@ public final class DPillEffectsFactory {
 	
 	// Make an inner class that acts as a table for effects...
 	// Make an inner class that holds teirs for the items...
-	
-	
 	private static class Teirs {
 		
 		private static int number = 0;
@@ -213,4 +208,5 @@ public final class DPillEffectsFactory {
 			number = 0;
 		}
 	}
+
 }

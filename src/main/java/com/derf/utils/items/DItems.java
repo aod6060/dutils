@@ -59,20 +59,14 @@ public final class DItems {
 		DRegistry.registerRenderer(GIRON_APPLE, "giron_apple");
 		DRegistry.registerRenderer(GIRON_APPLE, 1, "giron_apple");
 		DRegistry.registerRenderer(EMPTY_CAPSULE, "pill/empty_capsule");
-		
-		
-		for(int i = 0; i < DPillEffectsFactory.getMaxSize(); i++) {
-			DRegistry.registerRenderer(PILLS, i, "pill/"+ DPillEffectsFactory.get(i).getName());
-		}
+		DPillEffectsFactory.registerRenderer();
 	}
 	
 	
 	@Mod.EventBusSubscriber
 	public static class RegistryHandler {
-		
 		@SubscribeEvent
 		public static void registerItem(final RegistryEvent.Register<Item> event) {
-			
 			final Item[] items = {
 					DItems.GIRON_BASE,
 					DItems.GIRON_INGOT,
@@ -82,9 +76,7 @@ public final class DItems {
 					DItems.EMPTY_CAPSULE,
 					DItems.PILLS
 			};
-			
 			event.getRegistry().registerAll(items);
 		}
-		
 	}
 }

@@ -9,12 +9,10 @@ public class DCreativeTabsDUtilsPharmaceuticals extends CreativeTabs {
 
 	public DCreativeTabsDUtilsPharmaceuticals() {
 		super("tab_dutils_pharmaceuticals");
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public ItemStack getTabIconItem() {
-		// TODO Auto-generated method stub
 		return new ItemStack(DItems.EMPTY_CAPSULE);
 	}
 

@@ -3,8 +3,6 @@ package com.derf.utils.proxy;
 import com.derf.utils.DLoader;
 import com.derf.utils.DLogger;
 import com.derf.utils.blocks.DBlocks;
-import com.derf.utils.crafting.RecipeFactoryShaped;
-import com.derf.utils.crafting.RecipeFactoryShapeless;
 import com.derf.utils.creativetabs.DCreativeTabs;
 import com.derf.utils.items.DItems;
 

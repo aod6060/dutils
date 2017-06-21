@@ -33,8 +33,6 @@ public class DLoader {
 	public DLoader() {
 		// Handle registration..
 		DLogger.create();
-		//MinecraftForge.EVENT_BUS.register(new DBlocks());
-		//MinecraftForge.EVENT_BUS.register(new DItems());
 		DPillEffectsFactory.init();
 	}
 	

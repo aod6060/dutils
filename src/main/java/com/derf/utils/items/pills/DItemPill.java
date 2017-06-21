@@ -1,6 +1,7 @@
 package com.derf.utils.items.pills;
 
 import com.derf.utils.items.DItem;
+import com.derf.utils.util.DUtility;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -33,12 +34,14 @@ public class DItemPill extends DItem {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void getSubItems(CreativeTabs itemIn, NonNullList<ItemStack> tab) {		
-		if(this.func_194125_a(itemIn)) {
+	public void getSubItems(CreativeTabs itemIn, NonNullList<ItemStack> tab) {
+		if(DUtility.isInCreativeTab(itemIn, this)) {
 			for(int i = 0; i < DPillEffectsFactory.getMaxSize(); i++) {
 				tab.add(new ItemStack(this, 1, i));
 			}
 		}
+		
+		
 	}
 
 	@Override

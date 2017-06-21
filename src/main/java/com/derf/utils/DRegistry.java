@@ -1,6 +1,9 @@
 package com.derf.utils;
 
-import com.derf.utils.crafting.DCraftingManager;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelBakery;
@@ -44,15 +47,14 @@ public class DRegistry {
 	}
 	
 	public static void addVariants(Item item, String... args) {
-		ResourceLocation[] resourceLocation = new ResourceLocation[args.length];
-		
-		for(int i = 0; i < resourceLocation.length; i++) {
-			resourceLocation[i] = new ResourceLocation(DLoader.modid + ":" + args[i]);
+		List<String> argsList = Arrays.asList(args);
+		List<ResourceLocation> resList = argsList.stream()
+		         								 .map(arg -> new ResourceLocation(DLoader.modid + ":" + arg))
+		         								 .collect(Collectors.toList());
+		if(resList.size() > 0) {
+			ModelBakery.registerItemVariants(item,resList.toArray(new ResourceLocation[0]));
 		}
 		
-		if(resourceLocation.length > 0) {
-			ModelBakery.registerItemVariants(item, resourceLocation);
-		}
 	}
 	
 	// Fuel Handler
@@ -86,17 +88,5 @@ public class DRegistry {
 	// TileEntity
 	public static void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String name) {
 		GameRegistry.registerTileEntity(tileEntityClass, name);
-	}
-	
-	// Register Crafting Recipes...
-	/**
-	 * This will register all recipes with the new recipe system...
-	 * @param String modid - Takes mod ID and searches for recipes in recipes folder /assets/[modid]/recipes
-	 * 
-	 * This will get deleted soon once the pill system is created..
-	 */
-	@Deprecated
-	public static void registerRecipes(String modid) {
-		DCraftingManager.registerRecipes(modid);
 	}
 }
