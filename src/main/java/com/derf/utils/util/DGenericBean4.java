@@ -47,4 +47,12 @@ public class DGenericBean4<S, R, T, U> {
 	public void setValue4(U value4) {
 		this.value4 = value4;
 	}
+
+	@Override
+	public String toString() {
+		return "DGenericBean4 [value1=" + value1 + ", value2=" + value2 + ", value3=" + value3 + ", value4=" + value4
+				+ "]";
+	}
+	
+	
 }

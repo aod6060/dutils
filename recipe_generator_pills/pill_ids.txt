@@ -1,0 +1,405 @@
+// speed teir 1
+ { "item": "dutils:pill", "data": 1 }
+
+// slowness teir 1
+ { "item": "dutils:pill", "data": 2 }
+
+// haste teir 1
+ { "item": "dutils:pill", "data": 3 }
+
+// mining_fatigue teir 1
+ { "item": "dutils:pill", "data": 4 }
+
+// strength teir 1
+ { "item": "dutils:pill", "data": 5 }
+
+// jump_boost teir 1
+ { "item": "dutils:pill", "data": 6 }
+
+// nausea teir 1
+ { "item": "dutils:pill", "data": 7 }
+
+// regeneration teir 1
+ { "item": "dutils:pill", "data": 8 }
+
+// resistance teir 1
+ { "item": "dutils:pill", "data": 9 }
+
+// fire_resistance teir 1
+ { "item": "dutils:pill", "data": 10 }
+
+// water_breathing teir 1
+ { "item": "dutils:pill", "data": 11 }
+
+// invisibility teir 1
+ { "item": "dutils:pill", "data": 12 }
+
+// blindness teir 1
+ { "item": "dutils:pill", "data": 13 }
+
+// night_vision teir 1
+ { "item": "dutils:pill", "data": 14 }
+
+// hunger teir 1
+ { "item": "dutils:pill", "data": 15 }
+
+// weakness teir 1
+ { "item": "dutils:pill", "data": 16 }
+
+// poison teir 1
+ { "item": "dutils:pill", "data": 17 }
+
+// wither teir 1
+ { "item": "dutils:pill", "data": 18 }
+
+// health_boost teir 1
+ { "item": "dutils:pill", "data": 19 }
+
+// absorption teir 1
+ { "item": "dutils:pill", "data": 20 }
+
+// saturation teir 1
+ { "item": "dutils:pill", "data": 21 }
+
+// glowing teir 1
+ { "item": "dutils:pill", "data": 22 }
+
+// levitation teir 1
+ { "item": "dutils:pill", "data": 23 }
+
+// luck teir 1
+ { "item": "dutils:pill", "data": 24 }
+
+// unluck teir 1
+ { "item": "dutils:pill", "data": 25 }
+
+// speed teir 2
+ { "item": "dutils:pill", "data": 26 }
+
+// slowness teir 2
+ { "item": "dutils:pill", "data": 27 }
+
+// haste teir 2
+ { "item": "dutils:pill", "data": 28 }
+
+// mining_fatigue teir 2
+ { "item": "dutils:pill", "data": 29 }
+
+// strength teir 2
+ { "item": "dutils:pill", "data": 30 }
+
+// jump_boost teir 2
+ { "item": "dutils:pill", "data": 31 }
+
+// nausea teir 2
+ { "item": "dutils:pill", "data": 32 }
+
+// regeneration teir 2
+ { "item": "dutils:pill", "data": 33 }
+
+// resistance teir 2
+ { "item": "dutils:pill", "data": 34 }
+
+// fire_resistance teir 2
+ { "item": "dutils:pill", "data": 35 }
+
+// water_breathing teir 2
+ { "item": "dutils:pill", "data": 36 }
+
+// invisibility teir 2
+ { "item": "dutils:pill", "data": 37 }
+
+// blindness teir 2
+ { "item": "dutils:pill", "data": 38 }
+
+// night_vision teir 2
+ { "item": "dutils:pill", "data": 39 }
+
+// hunger teir 2
+ { "item": "dutils:pill", "data": 40 }
+
+// weakness teir 2
+ { "item": "dutils:pill", "data": 41 }
+
+// poison teir 2
+ { "item": "dutils:pill", "data": 42 }
+
+// wither teir 2
+ { "item": "dutils:pill", "data": 43 }
+
+// health_boost teir 2
+ { "item": "dutils:pill", "data": 44 }
+
+// absorption teir 2
+ { "item": "dutils:pill", "data": 45 }
+
+// saturation teir 2
+ { "item": "dutils:pill", "data": 46 }
+
+// glowing teir 2
+ { "item": "dutils:pill", "data": 47 }
+
+// levitation teir 2
+ { "item": "dutils:pill", "data": 48 }
+
+// luck teir 2
+ { "item": "dutils:pill", "data": 49 }
+
+// unluck teir 2
+ { "item": "dutils:pill", "data": 50 }
+
+// speed teir 3
+ { "item": "dutils:pill", "data": 51 }
+
+// slowness teir 3
+ { "item": "dutils:pill", "data": 52 }
+
+// haste teir 3
+ { "item": "dutils:pill", "data": 53 }
+
+// mining_fatigue teir 3
+ { "item": "dutils:pill", "data": 54 }
+
+// strength teir 3
+ { "item": "dutils:pill", "data": 55 }
+
+// jump_boost teir 3
+ { "item": "dutils:pill", "data": 56 }
+
+// nausea teir 3
+ { "item": "dutils:pill", "data": 57 }
+
+// regeneration teir 3
+ { "item": "dutils:pill", "data": 58 }
+
+// resistance teir 3
+ { "item": "dutils:pill", "data": 59 }
+
+// fire_resistance teir 3
+ { "item": "dutils:pill", "data": 60 }
+
+// water_breathing teir 3
+ { "item": "dutils:pill", "data": 61 }
+
+// invisibility teir 3
+ { "item": "dutils:pill", "data": 62 }
+
+// blindness teir 3
+ { "item": "dutils:pill", "data": 63 }
+
+// night_vision teir 3
+ { "item": "dutils:pill", "data": 64 }
+
+// hunger teir 3
+ { "item": "dutils:pill", "data": 65 }
+
+// weakness teir 3
+ { "item": "dutils:pill", "data": 66 }
+
+// poison teir 3
+ { "item": "dutils:pill", "data": 67 }
+
+// wither teir 3
+ { "item": "dutils:pill", "data": 68 }
+
+// health_boost teir 3
+ { "item": "dutils:pill", "data": 69 }
+
+// absorption teir 3
+ { "item": "dutils:pill", "data": 70 }
+
+// saturation teir 3
+ { "item": "dutils:pill", "data": 71 }
+
+// glowing teir 3
+ { "item": "dutils:pill", "data": 72 }
+
+// levitation teir 3
+ { "item": "dutils:pill", "data": 73 }
+
+// luck teir 3
+ { "item": "dutils:pill", "data": 74 }
+
+// unluck teir 3
+ { "item": "dutils:pill", "data": 75 }
+
+// speed teir 4
+ { "item": "dutils:pill", "data": 76 }
+
+// slowness teir 4
+ { "item": "dutils:pill", "data": 77 }
+
+// haste teir 4
+ { "item": "dutils:pill", "data": 78 }
+
+// mining_fatigue teir 4
+ { "item": "dutils:pill", "data": 79 }
+
+// strength teir 4
+ { "item": "dutils:pill", "data": 80 }
+
+// jump_boost teir 4
+ { "item": "dutils:pill", "data": 81 }
+
+// nausea teir 4
+ { "item": "dutils:pill", "data": 82 }
+
+// regeneration teir 4
+ { "item": "dutils:pill", "data": 83 }
+
+// resistance teir 4
+ { "item": "dutils:pill", "data": 84 }
+
+// fire_resistance teir 4
+ { "item": "dutils:pill", "data": 85 }
+
+// water_breathing teir 4
+ { "item": "dutils:pill", "data": 86 }
+
+// invisibility teir 4
+ { "item": "dutils:pill", "data": 87 }
+
+// blindness teir 4
+ { "item": "dutils:pill", "data": 88 }
+
+// night_vision teir 4
+ { "item": "dutils:pill", "data": 89 }
+
+// hunger teir 4
+ { "item": "dutils:pill", "data": 90 }
+
+// weakness teir 4
+ { "item": "dutils:pill", "data": 91 }
+
+// poison teir 4
+ { "item": "dutils:pill", "data": 92 }
+
+// wither teir 4
+ { "item": "dutils:pill", "data": 93 }
+
+// health_boost teir 4
+ { "item": "dutils:pill", "data": 94 }
+
+// absorption teir 4
+ { "item": "dutils:pill", "data": 95 }
+
+// saturation teir 4
+ { "item": "dutils:pill", "data": 96 }
+
+// glowing teir 4
+ { "item": "dutils:pill", "data": 97 }
+
+// levitation teir 4
+ { "item": "dutils:pill", "data": 98 }
+
+// luck teir 4
+ { "item": "dutils:pill", "data": 99 }
+
+// unluck teir 4
+ { "item": "dutils:pill", "data": 100 }
+
+// speed teir 5
+ { "item": "dutils:pill", "data": 101 }
+
+// slowness teir 5
+ { "item": "dutils:pill", "data": 102 }
+
+// haste teir 5
+ { "item": "dutils:pill", "data": 103 }
+
+// mining_fatigue teir 5
+ { "item": "dutils:pill", "data": 104 }
+
+// strength teir 5
+ { "item": "dutils:pill", "data": 105 }
+
+// jump_boost teir 5
+ { "item": "dutils:pill", "data": 106 }
+
+// nausea teir 5
+ { "item": "dutils:pill", "data": 107 }
+
+// regeneration teir 5
+ { "item": "dutils:pill", "data": 108 }
+
+// resistance teir 5
+ { "item": "dutils:pill", "data": 109 }
+
+// fire_resistance teir 5
+ { "item": "dutils:pill", "data": 110 }
+
+// water_breathing teir 5
+ { "item": "dutils:pill", "data": 111 }
+
+// invisibility teir 5
+ { "item": "dutils:pill", "data": 112 }
+
+// blindness teir 5
+ { "item": "dutils:pill", "data": 113 }
+
+// night_vision teir 5
+ { "item": "dutils:pill", "data": 114 }
+
+// hunger teir 5
+ { "item": "dutils:pill", "data": 115 }
+
+// weakness teir 5
+ { "item": "dutils:pill", "data": 116 }
+
+// poison teir 5
+ { "item": "dutils:pill", "data": 117 }
+
+// wither teir 5
+ { "item": "dutils:pill", "data": 118 }
+
+// health_boost teir 5
+ { "item": "dutils:pill", "data": 119 }
+
+// absorption teir 5
+ { "item": "dutils:pill", "data": 120 }
+
+// saturation teir 5
+ { "item": "dutils:pill", "data": 121 }
+
+// glowing teir 5
+ { "item": "dutils:pill", "data": 122 }
+
+// levitation teir 5
+ { "item": "dutils:pill", "data": 123 }
+
+// luck teir 5
+ { "item": "dutils:pill", "data": 124 }
+
+// unluck teir 5
+ { "item": "dutils:pill", "data": 125 }
+
+// instant_damage teir 1
+ { "item": "dutils:pill", "data": 126 }
+
+// instant_health teir 1
+ { "item": "dutils:pill", "data": 127 }
+
+// instant_damage teir 2
+ { "item": "dutils:pill", "data": 128 }
+
+// instant_health teir 2
+ { "item": "dutils:pill", "data": 129 }
+
+// instant_damage teir 3
+ { "item": "dutils:pill", "data": 130 }
+
+// instant_health teir 3
+ { "item": "dutils:pill", "data": 131 }
+
+// instant_damage teir 4
+ { "item": "dutils:pill", "data": 132 }
+
+// instant_health teir 4
+ { "item": "dutils:pill", "data": 133 }
+
+// instant_damage teir 5
+ { "item": "dutils:pill", "data": 134 }
+
+// instant_health teir 5
+ { "item": "dutils:pill", "data": 135 }
+

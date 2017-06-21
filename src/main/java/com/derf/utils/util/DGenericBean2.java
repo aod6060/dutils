@@ -27,6 +27,11 @@ public class DGenericBean2<S, T> {
 	public void setValue2(T value2) {
 		this.value2 = value2;
 	}
+
+	@Override
+	public String toString() {
+		return "DGenericBean2 [value1=" + value1 + ", value2=" + value2 + "]";
+	}
 	
 	
 }

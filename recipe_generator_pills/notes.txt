@@ -1,0 +1,14 @@
+For teirs 2 to 5 recipes I'm going to generate the recipes using java... These recipes will 
+have a simple interface that will execute a simple interface that will have several variables
+
+1) There will be two different types of meta data.
+	- 1 for the pill input ingredent
+	- 2 for the pill output result
+	
+2) The interface should be a single line so it be simple for lambda for example...
+
+
+public interface IPillRecipeFunction {
+	void handlePill(int input, int output, String name);
+}
+

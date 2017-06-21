@@ -23,7 +23,10 @@ import net.minecraft.potion.Potion;
 public final class DPillEffectsFactory {
 	private static int IDs = 1;
 	
-	private static boolean isGenerateIDs = true;
+	private static boolean isGenerateIDs = false;
+	
+	// Check to see if I want to generate recipes 2 - 5
+	private static boolean isGenerateRecipes = true;
 	
 	private static List<IDPillEffect> effects = new ArrayList<IDPillEffect>();
 	
@@ -69,6 +72,11 @@ public final class DPillEffectsFactory {
 				e.printStackTrace();
 			}
 		}
+		
+		// Handle Generator for recipes...
+		if(isGenerateRecipes) {
+			DPillRecipeGenerator.generate();
+		}
 	}
 	
 	private static List<Teirs> createTeirList() {
@@ -90,31 +98,31 @@ public final class DPillEffectsFactory {
 
 	private static List<DGenericBean2<Potion, String>> createEffects1List() {
 		return Arrays.asList(
-				new DGenericBean2<Potion, String>(MobEffects.SPEED, "speed"),
-				new DGenericBean2<Potion, String>(MobEffects.SLOWNESS, "slowness"),
-				new DGenericBean2<Potion, String>(MobEffects.HASTE, "haste"),
-				new DGenericBean2<Potion, String>(MobEffects.MINING_FATIGUE, "mining_fatigue"),
-				new DGenericBean2<Potion, String>(MobEffects.STRENGTH, "strength"),
-				new DGenericBean2<Potion, String>(MobEffects.JUMP_BOOST, "jump_boost"),
-				new DGenericBean2<Potion, String>(MobEffects.NAUSEA, "nausea"),
-				new DGenericBean2<Potion, String>(MobEffects.REGENERATION, "regeneration"),
-				new DGenericBean2<Potion, String>(MobEffects.RESISTANCE, "resistance"),
-				new DGenericBean2<Potion, String>(MobEffects.FIRE_RESISTANCE, "fire_resistance"),
-				new DGenericBean2<Potion, String>(MobEffects.WATER_BREATHING, "water_breathing"),
-				new DGenericBean2<Potion, String>(MobEffects.INVISIBILITY, "invisibility"),
-				new DGenericBean2<Potion, String>(MobEffects.BLINDNESS, "blindness"),
-				new DGenericBean2<Potion, String>(MobEffects.NIGHT_VISION, "night_vision"),
-				new DGenericBean2<Potion, String>(MobEffects.HUNGER, "hunger"),
-				new DGenericBean2<Potion, String>(MobEffects.WEAKNESS, "weakness"),
-				new DGenericBean2<Potion, String>(MobEffects.POISON, "poison"),
-				new DGenericBean2<Potion, String>(MobEffects.WITHER, "wither"),
-				new DGenericBean2<Potion, String>(MobEffects.HEALTH_BOOST, "health_boost"),
-				new DGenericBean2<Potion, String>(MobEffects.ABSORPTION, "absorption"),
-				new DGenericBean2<Potion, String>(MobEffects.SATURATION, "saturation"),
-				new DGenericBean2<Potion, String>(MobEffects.GLOWING, "glowing"),
-				new DGenericBean2<Potion, String>(MobEffects.LEVITATION, "levitation"),
-				new DGenericBean2<Potion, String>(MobEffects.LUCK, "luck"),
-				new DGenericBean2<Potion, String>(MobEffects.UNLUCK, "unluck")
+				new DGenericBean2<Potion, String>(MobEffects.SPEED, "speed"), // 1
+				new DGenericBean2<Potion, String>(MobEffects.SLOWNESS, "slowness"), // 2
+				new DGenericBean2<Potion, String>(MobEffects.HASTE, "haste"), // 3
+				new DGenericBean2<Potion, String>(MobEffects.MINING_FATIGUE, "mining_fatigue"),// 4
+				new DGenericBean2<Potion, String>(MobEffects.STRENGTH, "strength"),// 5
+				new DGenericBean2<Potion, String>(MobEffects.JUMP_BOOST, "jump_boost"),// 6
+				new DGenericBean2<Potion, String>(MobEffects.NAUSEA, "nausea"),// 7
+				new DGenericBean2<Potion, String>(MobEffects.REGENERATION, "regeneration"),// 8
+				new DGenericBean2<Potion, String>(MobEffects.RESISTANCE, "resistance"),// 9
+				new DGenericBean2<Potion, String>(MobEffects.FIRE_RESISTANCE, "fire_resistance"),// 10
+				new DGenericBean2<Potion, String>(MobEffects.WATER_BREATHING, "water_breathing"),// 11
+				new DGenericBean2<Potion, String>(MobEffects.INVISIBILITY, "invisibility"),// 12
+				new DGenericBean2<Potion, String>(MobEffects.BLINDNESS, "blindness"),// 13
+				new DGenericBean2<Potion, String>(MobEffects.NIGHT_VISION, "night_vision"),// 14
+				new DGenericBean2<Potion, String>(MobEffects.HUNGER, "hunger"),// 15
+				new DGenericBean2<Potion, String>(MobEffects.WEAKNESS, "weakness"),// 16
+				new DGenericBean2<Potion, String>(MobEffects.POISON, "poison"),// 17
+				new DGenericBean2<Potion, String>(MobEffects.WITHER, "wither"),// 18
+				new DGenericBean2<Potion, String>(MobEffects.HEALTH_BOOST, "health_boost"),// 19
+				new DGenericBean2<Potion, String>(MobEffects.ABSORPTION, "absorption"),// 20
+				new DGenericBean2<Potion, String>(MobEffects.SATURATION, "saturation"),// 21
+				new DGenericBean2<Potion, String>(MobEffects.GLOWING, "glowing"),// 22
+				new DGenericBean2<Potion, String>(MobEffects.LEVITATION, "levitation"),// 23
+				new DGenericBean2<Potion, String>(MobEffects.LUCK, "luck"),// 24
+				new DGenericBean2<Potion, String>(MobEffects.UNLUCK, "unluck") // 25
 		);
 	}
 	

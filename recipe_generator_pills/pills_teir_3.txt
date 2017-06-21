@@ -1,0 +1,83 @@
+Json Recipe Teir 2 to Teir 3 pill_teir2 + gold_ingot = pill_teir3
+
+// speed teir 3
+ { "item": "dutils:pill", "data": 51 }
+
+// slowness teir 3
+ { "item": "dutils:pill", "data": 52 }
+
+// haste teir 3
+ { "item": "dutils:pill", "data": 53 }
+
+// mining_fatigue teir 3
+ { "item": "dutils:pill", "data": 54 }
+
+// strength teir 3
+ { "item": "dutils:pill", "data": 55 }
+
+// jump_boost teir 3
+ { "item": "dutils:pill", "data": 56 }
+
+// nausea teir 3
+ { "item": "dutils:pill", "data": 57 }
+
+// regeneration teir 3
+ { "item": "dutils:pill", "data": 58 }
+
+// resistance teir 3
+ { "item": "dutils:pill", "data": 59 }
+
+// fire_resistance teir 3
+ { "item": "dutils:pill", "data": 60 }
+
+// water_breathing teir 3
+ { "item": "dutils:pill", "data": 61 }
+
+// invisibility teir 3
+ { "item": "dutils:pill", "data": 62 }
+
+// blindness teir 3
+ { "item": "dutils:pill", "data": 63 }
+
+// night_vision teir 3
+ { "item": "dutils:pill", "data": 64 }
+
+// hunger teir 3
+ { "item": "dutils:pill", "data": 65 }
+
+// weakness teir 3
+ { "item": "dutils:pill", "data": 66 }
+
+// poison teir 3
+ { "item": "dutils:pill", "data": 67 }
+
+// wither teir 3
+ { "item": "dutils:pill", "data": 68 }
+
+// health_boost teir 3
+ { "item": "dutils:pill", "data": 69 }
+
+// absorption teir 3
+ { "item": "dutils:pill", "data": 70 }
+
+// saturation teir 3
+ { "item": "dutils:pill", "data": 71 }
+
+// glowing teir 3
+ { "item": "dutils:pill", "data": 72 }
+
+// levitation teir 3
+ { "item": "dutils:pill", "data": 73 }
+
+// luck teir 3
+ { "item": "dutils:pill", "data": 74 }
+
+// unluck teir 3
+ { "item": "dutils:pill", "data": 75 }
+
+// instant_damage teir 3
+ { "item": "dutils:pill", "data": 130 }
+
+// instant_health teir 3
+ { "item": "dutils:pill", "data": 131 }
+ 

@@ -1,0 +1,83 @@
+Json Recipe Teir 4 to Teir 5 pill_teir4 + netherstar = pill_teir5
+
+// speed teir 5
+ { "item": "dutils:pill", "data": 101 }
+
+// slowness teir 5
+ { "item": "dutils:pill", "data": 102 }
+
+// haste teir 5
+ { "item": "dutils:pill", "data": 103 }
+
+// mining_fatigue teir 5
+ { "item": "dutils:pill", "data": 104 }
+
+// strength teir 5
+ { "item": "dutils:pill", "data": 105 }
+
+// jump_boost teir 5
+ { "item": "dutils:pill", "data": 106 }
+
+// nausea teir 5
+ { "item": "dutils:pill", "data": 107 }
+
+// regeneration teir 5
+ { "item": "dutils:pill", "data": 108 }
+
+// resistance teir 5
+ { "item": "dutils:pill", "data": 109 }
+
+// fire_resistance teir 5
+ { "item": "dutils:pill", "data": 110 }
+
+// water_breathing teir 5
+ { "item": "dutils:pill", "data": 111 }
+
+// invisibility teir 5
+ { "item": "dutils:pill", "data": 112 }
+
+// blindness teir 5
+ { "item": "dutils:pill", "data": 113 }
+
+// night_vision teir 5
+ { "item": "dutils:pill", "data": 114 }
+
+// hunger teir 5
+ { "item": "dutils:pill", "data": 115 }
+
+// weakness teir 5
+ { "item": "dutils:pill", "data": 116 }
+
+// poison teir 5
+ { "item": "dutils:pill", "data": 117 }
+
+// wither teir 5
+ { "item": "dutils:pill", "data": 118 }
+
+// health_boost teir 5
+ { "item": "dutils:pill", "data": 119 }
+
+// absorption teir 5
+ { "item": "dutils:pill", "data": 120 }
+
+// saturation teir 5
+ { "item": "dutils:pill", "data": 121 }
+
+// glowing teir 5
+ { "item": "dutils:pill", "data": 122 }
+
+// levitation teir 5
+ { "item": "dutils:pill", "data": 123 }
+
+// luck teir 5
+ { "item": "dutils:pill", "data": 124 }
+
+// unluck teir 5
+ { "item": "dutils:pill", "data": 125 }
+
+// instant_damage teir 5
+ { "item": "dutils:pill", "data": 134 }
+
+// instant_health teir 5
+ { "item": "dutils:pill", "data": 135 }
+

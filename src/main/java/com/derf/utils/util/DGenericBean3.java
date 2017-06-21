@@ -37,5 +37,11 @@ public class DGenericBean3<S, R, T> {
 	public void setValue3(T value3) {
 		this.value3 = value3;
 	}
+
+	@Override
+	public String toString() {
+		return "DGenericBean3 [value1=" + value1 + ", value2=" + value2 + ", value3=" + value3 + "]";
+	}
+	
 	
 }

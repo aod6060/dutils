@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{ "item": "minecraft:iron_ingot" },
+		{ "item": "dutils:pill", "data": 19}
+	],
+	"result": { "item": "dutils:pill", "data": 44}
+}

@@ -1,0 +1,84 @@
+These recipes I'm going to need to think about due to how complex they are. They 
+will not be part of the json generator for the recipes...2
+
+// speed teir 1
+ { "item": "dutils:pill", "data": 1 }
+
+// slowness teir 1
+ { "item": "dutils:pill", "data": 2 }
+
+// haste teir 1
+ { "item": "dutils:pill", "data": 3 }
+
+// mining_fatigue teir 1
+ { "item": "dutils:pill", "data": 4 }
+
+// strength teir 1
+ { "item": "dutils:pill", "data": 5 }
+
+// jump_boost teir 1
+ { "item": "dutils:pill", "data": 6 }
+
+// nausea teir 1
+ { "item": "dutils:pill", "data": 7 }
+
+// regeneration teir 1
+ { "item": "dutils:pill", "data": 8 }
+
+// resistance teir 1
+ { "item": "dutils:pill", "data": 9 }
+
+// fire_resistance teir 1
+ { "item": "dutils:pill", "data": 10 }
+
+// water_breathing teir 1
+ { "item": "dutils:pill", "data": 11 }
+
+// invisibility teir 1
+ { "item": "dutils:pill", "data": 12 }
+
+// blindness teir 1
+ { "item": "dutils:pill", "data": 13 }
+
+// night_vision teir 1
+ { "item": "dutils:pill", "data": 14 }
+
+// hunger teir 1
+ { "item": "dutils:pill", "data": 15 }
+
+// weakness teir 1
+ { "item": "dutils:pill", "data": 16 }
+
+// poison teir 1
+ { "item": "dutils:pill", "data": 17 }
+
+// wither teir 1
+ { "item": "dutils:pill", "data": 18 }
+
+// health_boost teir 1
+ { "item": "dutils:pill", "data": 19 }
+
+// absorption teir 1
+ { "item": "dutils:pill", "data": 20 }
+
+// saturation teir 1
+ { "item": "dutils:pill", "data": 21 }
+
+// glowing teir 1
+ { "item": "dutils:pill", "data": 22 }
+
+// levitation teir 1
+ { "item": "dutils:pill", "data": 23 }
+
+// luck teir 1
+ { "item": "dutils:pill", "data": 24 }
+ 
+ // unluck teir 1
+ { "item": "dutils:pill", "data": 25 }
+ 
+ // instant_damage teir 1
+ { "item": "dutils:pill", "data": 126 }
+
+// instant_health teir 1
+ { "item": "dutils:pill", "data": 127 }
+ 
